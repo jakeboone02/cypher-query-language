@@ -24,8 +24,16 @@
         }]
     },
     "license": "MIT",
+    "icon": "images/logo-neo4j.svg",
+    "galleryBanner": {
+        "color": "#0f5788",
+        "theme": "dark"
+    },
     "repository": {
         "type:": "git",
         "url": "https://github.com/jakeboone02/cypher-query-language.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jakeboone02/cypher-query-language/issues"
     }
 }
