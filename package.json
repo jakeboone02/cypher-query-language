@@ -2,7 +2,7 @@
     "name": "cypher-query-language",
     "displayName": "Cypher Query Language",
     "description": "Syntax highlighting for Neo4j's Cypher Query Language",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "jakeboone02",
     "engines": {
         "vscode": "^1.0.0"
@@ -11,17 +11,28 @@
         "Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "cypher",
-            "aliases": ["Cypher Query Language", "cypher"],
-            "extensions": [".cql",".cyp",".cypher"],
-            "configuration": "./cypher.configuration.json"
-        }],
-        "grammars": [{
-            "language": "cypher",
-            "scopeName": "source.cypher",
-            "path": "./syntaxes/cypher.tmLanguage"
-        }]
+        "languages": [
+            {
+                "id": "cypher",
+                "aliases": [
+                    "Cypher Query Language",
+                    "cypher"
+                ],
+                "extensions": [
+                    ".cql",
+                    ".cyp",
+                    ".cypher"
+                ],
+                "configuration": "./cypher.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "cypher",
+                "scopeName": "source.cypher",
+                "path": "./syntaxes/cypher.tmLanguage"
+            }
+        ]
     },
     "license": "MIT",
     "icon": "images/logo-neo4j.svg",
