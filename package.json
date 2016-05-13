@@ -23,5 +23,9 @@
             "path": "./syntaxes/cypher.tmLanguage"
         }]
     },
-    "license": "MIT"
+    "license": "MIT",
+    "repository": {
+        "type:": "git",
+        "url": "https://github.com/jakeboone02/cypher-query-language.git"
+    }
 }
