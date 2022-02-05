@@ -69,8 +69,8 @@ const formatCypher = (query: string) => {
         codeWithPlaceholders = theStringTemp.join('');
       }
 
-      // Two spaces for each indentation level
       let newLineText =
+        // Two spaces for each indentation level
         '  '.repeat(level) +
         codeWithPlaceholders
           // "Keywords, similar to clauses, should be styled in all capital letters and are not case-sensitive, but do not need to be placed on a separate line."
@@ -165,17 +165,13 @@ class CypherDocumentFormatter implements vscode.DocumentFormattingEditProvider {
   public provideDocumentFormattingEdits(
     doc: vscode.TextDocument
   ): vscode.ProviderResult<vscode.TextEdit[]> {
-    return [
-      new vscode.TextEdit(
-        new vscode.Range(
-          0,
-          0,
-          doc.lineCount - 1,
-          doc.lineAt(doc.lineCount - 1).range.end.character
-        ),
-        formatCypher(doc.getText())
-      ),
-    ];
+    const firstPosition = doc.lineAt(0).range.start;
+    const lastPosition = doc.lineAt(doc.lineCount - 1).range.end;
+    const fullRange = doc.validateRange(
+      new vscode.Range(firstPosition, lastPosition)
+    );
+
+    return [new vscode.TextEdit(fullRange, formatCypher(doc.getText().trim()))];
   }
 }
 
