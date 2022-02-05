@@ -6,6 +6,7 @@
   <array>
     <string>cql</string>
     <string>cyp</string>
+    <string>cypher</string>
   </array>
   <key>name</key>
   <string>Cypher</string>
