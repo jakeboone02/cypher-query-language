@@ -176,7 +176,6 @@ class CypherDocumentFormatter implements vscode.DocumentFormattingEditProvider {
 }
 
 export function activate(ctx: vscode.ExtensionContext): void {
-  console.log('activated formatter');
   ctx.subscriptions.push(
     vscode.languages.registerDocumentFormattingEditProvider(
       'cypher',
