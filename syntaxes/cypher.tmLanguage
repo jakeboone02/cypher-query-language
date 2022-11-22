@@ -159,7 +159,7 @@
         </dict>
         <dict>
           <key>match</key>
-          <string>[a-zA-Z_][a-zA-Z0-9_]*</string>
+          <string>[\p{L}_][\p{L}0-9_]*</string>
           <key>name</key>
           <string>variable.other.identifier.cypher</string>
         </dict>
@@ -207,7 +207,7 @@
         </dict>
         <dict>
           <key>begin</key>
-          <string>(?i)\b(node|relationship|rel)((:)([a-zA-Z_-][a-zA-Z0-9_]*))?(?=\s*\()</string>
+          <string>(?i)\b(node|relationship|rel)((:)([\p{L}_-][\p{L}0-9_]*))?(?=\s*\()</string>
           <key>beginCaptures</key>
           <dict>
             <key>1</key>
@@ -239,7 +239,7 @@
           <array>
             <dict>
               <key>match</key>
-              <string>((?:`.+?`)|(?:[a-zA-Z_][a-zA-Z0-9_]*))</string>
+              <string>((?:`.+?`)|(?:[\p{L}_][\p{L}0-9_]*))</string>
               <key>name</key>
               <string>variable.parameter.relationship-name.cypher</string>
             </dict>
@@ -371,7 +371,7 @@
                 </dict>
               </dict>
               <key>match</key>
-              <string>(:)((?:`.+?`)|(?:[a-zA-Z_][a-zA-Z0-9_]*))</string>
+              <string>(:)((?:`.+?`)|(?:[\p{L}_][\p{L}0-9_]*))</string>
               <key>name</key>
               <string>entity.name.class.relationship-type.cypher</string>
             </dict>
@@ -390,7 +390,7 @@
                 </dict>
               </dict>
               <key>match</key>
-              <string>(\|)(\s*)((?:`.+?`)|(?:[a-zA-Z_][a-zA-Z0-9_]*))</string>
+              <string>(\|)(\s*)((?:`.+?`)|(?:[\p{L}_][\p{L}0-9_]*))</string>
               <key>name</key>
               <string>entity.name.class.relationship-type-ored.cypher</string>
             </dict>
