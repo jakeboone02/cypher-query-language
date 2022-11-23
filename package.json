@@ -73,11 +73,9 @@
     "vscode-test": "^1.6.1"
   },
   "scripts": {
-    "vscode:prepublish": "yarn run compile",
+    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "lint": "eslint src --ext ts",
-    "outdated": "yarn upgrade-interactive"
-  },
-  "packageManager": "yarn@3.3.0"
+    "lint": "eslint src --ext ts"
+  }
 }
