@@ -2,7 +2,7 @@
   "name": "cypher-query-language",
   "displayName": "Cypher Query Language",
   "description": "Syntax highlighting and formatting for Neo4j's Cypher Query Language",
-  "version": "2.0.0",
+  "version": "1.0.2",
   "publisher": "jakeboone02",
   "engines": {
     "vscode": "^1.64.0"
@@ -64,7 +64,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
-    "@types/vscode": "^1.73.1",
+    "@types/vscode": "1.64.0",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "eslint": "^8.28.0",
